@@ -1,8 +1,5 @@
-import tweepy
 import markovify
-from authorization_tokens import *
 import random
-
 
 # Get raw text as string.
 with open("elliot.txt") as f:
@@ -11,18 +8,12 @@ with open("elliot.txt") as f:
 # Build the model.
 text_model = markovify.Text(text)
 
+
 #retain_original=False
 # Print three randomly-generated sentences of no more than 280 characters
 for i in range(1):
-    message = text_model.make_short_sentence(280, state_size=2)
-
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
-
-api = tweepy.API(auth)
-
-api.update_status(message)
-print("Done.")
+    message = text_model.make_short_sentence(400, state_size=2)
+    print(message)
 
 
 
