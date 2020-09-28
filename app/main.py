@@ -1,8 +1,6 @@
 import tweepy
 import markovify
 from authorization_tokens import *
-import random
-
 
 # Get raw text as string.
 with open("elliot.txt") as f:
@@ -22,7 +20,7 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 api.update_status(message)
-print("Done.")
+print(message)
 
 
 
