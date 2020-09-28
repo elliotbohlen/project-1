@@ -21,7 +21,7 @@ api = tweepy.API(auth)
 
 api.update_status(message)
 print(message)
-
+print("done")
 
 
 # docker run --rm -it -v "$(pwd)/app:/app" project-1:1.0
