@@ -9,9 +9,10 @@ with open("elliot.txt") as f:
 # Build the model.
 text_model = markovify.Text(text)
 
+#NewlineText
 #retain_original=False
 # Print three randomly-generated sentences of no more than 280 characters
-for i in range(1):
+for i in range(3):
     message = text_model.make_short_sentence(280, state_size=2)
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -23,5 +24,5 @@ api.update_status(message)
 print(message)
 print("done")
 
-
+#docker build . --tag project1:1.0
 # docker run --rm -it -v "$(pwd)/app:/app" project-1:1.0
