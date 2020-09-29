@@ -7,7 +7,7 @@ with open("elliot.txt") as f:
     text = f.read()
 
 # Build the model.
-text_model = markovify.Text(text)
+text_model = markovify.NewlineText(text)
 
 #NewlineText
 #retain_original=False
@@ -22,7 +22,7 @@ api = tweepy.API(auth)
 
 api.update_status(message)
 print(message)
-print("done")
+print("donneeee")
 
 #docker build . --tag project1:1.0
-# docker run --rm -it -v "$(pwd)/app:/app" project-1:1.0
+# docker run --rm -it -v "$(pwd)/app:/app" project1:1.0
