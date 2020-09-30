@@ -13,7 +13,7 @@ text_model = markovify.Text(text)
 #retain_original=False
 # Print three randomly-generated sentences of no more than 280 characters
 for i in range(1):
-    message = text_model.make_short_sentence(280, state_size=2, retain_original=False)
+    message = text_model.make_short_sentence(240, state_size=2, retain_original=False)
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
