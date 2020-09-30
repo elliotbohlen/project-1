@@ -1,3 +1,7 @@
 authorization_tokens.py
 *.pyc
 authorization_tokens.pyc
+
+elliot.txt
+corpus.txt
+ascii.txt
